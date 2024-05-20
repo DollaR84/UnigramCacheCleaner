@@ -45,12 +45,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
     def start_checker(self):
         if self.check_need_clear():
-            size_suff = self.cleaner.run()
-            size, suff = size_suff[:-3], self.size_suff.get(size_suff[-2:], "")
-            message = " ".join([_("cleared from unigram cache"), size, suff])
-            ui.message(message)
+            self.run()
             self.save_date_last_clean()
         self.process = None
+
+    def run(self):
+        size_suff = self.cleaner.run()
+        size, suff = size_suff[:-3], self.size_suff.get(size_suff[-2:], "")
+        message = " ".join([_("cleared from unigram cache"), size, suff])
+        ui.message(message)
 
     def check_need_clear(self):
         cleaning_period = config.conf["UnigramCacheCleaner"].get("cleaning_period", CleaningPeriod.DAY.value)
@@ -80,3 +83,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         now = datetime.now()
         now_str = now.strftime("%d.%m.%Y")
         config.conf["UnigramCacheCleaner"]["date_last_clean"] = now_str
+
+    @scriptHandler.script(
+        description=_("Manual clean cache"),
+        gesture="kb:NVDA+SHIFT+C"
+    )
+    def script_manual_clean(self, gesture):
+        self.run()
