@@ -1,6 +1,7 @@
-﻿import logging
-import math
+﻿import math
 import os
+
+from logHandler import log
 
 
 class Cleaner:
@@ -16,8 +17,10 @@ class Cleaner:
         "voice", "wallpapers",
     ]
 
-    def __init__(self, base_path: str):
-        self.base_path = base_path
+    def __init__(self, base_path1: str, base_path2: str):
+        self.base_paths = [base_path1]
+        if base_path2:
+            self.base_paths.append(base_path2)
 
     def run(self) -> str:
         total_size = 0
@@ -26,29 +29,28 @@ class Cleaner:
                 size = self._process_subfolder(subfolder)
                 total_size += size
             except Exception as err:
-                logger = logging.getLogger()
-                logger.error(f"Error process subfolder: {subfolder}")
-                logger.error(err, exc_info=True)
+                log.error(f"Error process subfolder: {subfolder}")
+                log.error(err, exc_info=True)
         return self._process_size(total_size)
 
     def _process_subfolder(self, subfolder: str) -> int:
         total_size = 0
-        folder = os.path.join(self.base_path, subfolder)
-        if not os.path.exists(folder):
-            return total_size
+        for base_path in self.base_paths:
+            folder = os.path.join(base_path, subfolder)
+            if not os.path.exists(folder):
+                continue
 
-        files = [file for file in os.listdir(folder) if os.path.isfile(os.path.join(folder, file))]
+            files = [file for file in os.listdir(folder) if os.path.isfile(os.path.join(folder, file))]
 
-        for file in files:
-            file_path = os.path.join(folder, file)
-            try:
-                size = os.stat(file_path).st_size
-                os.remove(file_path)
-                total_size += size
-            except Exception as err:
-                logger = logging.getLogger()
-                logger.error(f"Error remove file: {file_path}")
-                logger.error(err, exc_info=True)
+            for file in files:
+                file_path = os.path.join(folder, file)
+                try:
+                    size = os.stat(file_path).st_size
+                    os.remove(file_path)
+                    total_size += size
+                except Exception as err:
+                    log.error(f"Error remove file: {file_path}")
+                    log.error(err, exc_info=True)
 
         return total_size
 

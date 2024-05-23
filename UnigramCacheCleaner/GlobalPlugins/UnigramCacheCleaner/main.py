@@ -38,8 +38,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
         gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(UCCSettings)
 
-        unigram_cache_path = config.conf["UnigramCacheCleaner"].get("unigram_cache_path", UNIGRAM_CACHE_PATH)
-        self.cleaner = Cleaner(unigram_cache_path)
+        unigram_cache_path1 = config.conf["UnigramCacheCleaner"].get("unigram_cache_path1", UNIGRAM_CACHE_PATH)
+        unigram_cache_path2 = config.conf["UnigramCacheCleaner"].get("unigram_cache_path2", "")
+        self.cleaner = Cleaner(unigram_cache_path1, unigram_cache_path2)
 
         self.process = wx.CallLater(60 * 1000, self.start_checker)
 
@@ -75,7 +76,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         if CleaningPeriod.MONTH.value == cleaning_period:
             month_days = calendar.monthrange(date_last_clean.year, date_last_clean.month)[1]
             date_clean = date_last_clean + timedelta(days=month_days)
-            return date_clean > now
+            return now > date_clean
 
         return False
 
