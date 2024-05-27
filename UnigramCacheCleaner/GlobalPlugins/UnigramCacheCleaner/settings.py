@@ -13,19 +13,6 @@ from .types import CleaningPeriod
 addonHandler.initTranslation()
 
 
-LOCALAPPDATA = os.environ.get("LOCALAPPDATA")
-UNIGRAM_CACHE_PATH = os.path.join(LOCALAPPDATA, r"Packages\38833FF26BA1D.UnigramPreview_g9c9v27vpyspw\LocalState\0")
-
-
-confspec = {
-    "unigram_cache_path1": f"string(default='{UNIGRAM_CACHE_PATH}')",
-    "unigram_cache_path2": "string(default='')",
-    "cleaning_period": "string(default='day')",
-    "date_last_clean": "string(default='')",
-}
-config.conf.spec["UnigramCacheCleaner"] = confspec
-
-
 class UCCSettings(SettingsPanel):
     title = "UnigramCacheCleaner"
 
@@ -34,6 +21,18 @@ class UCCSettings(SettingsPanel):
         CleaningPeriod.WEEK.value: _("cleaning once a week"),
         CleaningPeriod.MONTH.value: _("cleaning once a month"),
     }
+
+    local_appdata = os.environ.get("LOCALAPPDATA")
+
+    @classmethod
+    @property
+    def default_cache_path_store(cls) -> str:
+        return os.path.join(cls.local_appdata, r"Packages\38833FF26BA1D.UnigramPreview_g9c9v27vpyspw\LocalState\0")
+
+    @classmethod
+    @property
+    def default_cache_path_beta(cls) -> str:
+        return os.path.join(cls.local_appdata, r"Packages\TelegramFZ-LLC.Unigram_1vfw5zm9jmzqy\LocalState\0")
 
     def makeSettings(self, settingsSizer):
         settings_sizer_helper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
@@ -47,9 +46,8 @@ class UCCSettings(SettingsPanel):
 
         browse_text = _("Browse...")
         dir_dialog_title = _("Select a directory")
-        _unigram_cache_path_default = UNIGRAM_CACHE_PATH
 
-        for index in range(1, 3):
+        for index, default_path in zip(range(1, 3), (self.default_cache_path_store, self.default_cache_path_beta,)):
             group_sizer = wx.StaticBoxSizer(
                 wx.VERTICAL, self,
                 label=" ".join([_("Path to cache unigram folder"), str(index)]),
@@ -62,9 +60,8 @@ class UCCSettings(SettingsPanel):
 
             setattr(self, f"unigram_cache_path{index}", directory_entry_control.pathControl)
             getattr(self, f"unigram_cache_path{index}").Value = config.conf["UnigramCacheCleaner"].get(
-                f"unigram_cache_path{index}", _unigram_cache_path_default
+                f"unigram_cache_path{index}", default_path
             )
-            _unigram_cache_path_default = ""
 
     def get_key(self, data: dict, select_value: str):
         for key, value in data.items():
@@ -77,3 +74,12 @@ class UCCSettings(SettingsPanel):
         config.conf["UnigramCacheCleaner"]["cleaning_period"] = self.get_key(
             self.localisation_cleaning_period, self.cleaning_period.GetStringSelection()
         )
+
+
+confspec = {
+    "unigram_cache_path1": f"string(default='{UCCSettings.default_cache_path_store}')",
+    "unigram_cache_path2": f"string(default='{UCCSettings.default_cache_path_beta}')",
+    "cleaning_period": "string(default='day')",
+    "date_last_clean": "string(default='')",
+}
+config.conf.spec["UnigramCacheCleaner"] = confspec
