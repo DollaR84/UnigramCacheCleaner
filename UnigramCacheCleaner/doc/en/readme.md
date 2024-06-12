@@ -15,6 +15,9 @@ When setting your path, be careful, as the addon will delete all files from it!
 * NVDA+SHIFT+C: manually start clearing cache;
 
 ##List of changes:
+###Version 1.3.1
+* added Turkish localization (Umut Korkmaz);
+
 ###Version 1.3.0
 * added default path for unigram beta cache;
 * added the ability to specify a custom folder for cleaning;
