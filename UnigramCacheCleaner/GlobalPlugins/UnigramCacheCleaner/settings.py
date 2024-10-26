@@ -7,7 +7,7 @@ from gui.settingsDialogs import SettingsPanel
 
 import wx
 
-from .types import CleaningPeriod
+from .types import CleaningPeriod, Subfolders
 
 
 addonHandler.initTranslation()
@@ -33,6 +33,10 @@ class UCCSettings(SettingsPanel):
     @property
     def default_cache_path_beta(cls) -> str:
         return os.path.join(cls.local_appdata, r"Packages\TelegramFZ-LLC.Unigram_1vfw5zm9jmzqy\LocalState\0")
+
+    @classmethod
+    def get_subfolder_setting(cls, subfolder: Subfolders) -> bool:
+        return config.conf["UnigramCacheCleaner"].get(f"subfolder_{subfolder.value}", True)
 
     def makeSettings(self, settingsSizer):
         settings_sizer_helper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
@@ -63,6 +67,16 @@ class UCCSettings(SettingsPanel):
                 f"unigram_cache_path{index}", default_path
             )
 
+        group_sizer = wx.StaticBoxSizer(wx.VERTICAL, self, label=_("Subdirectories to clean up:"))
+        group_box = group_sizer.GetStaticBox()
+        group_helper = settings_sizer_helper.addItem(gui.guiHelper.BoxSizerHelper(self, sizer=group_sizer))
+
+        self.subfolder_controls = {}
+        for subfolder in Subfolders:
+            subfolder_ctrl = group_helper.addItem(wx.CheckBox(self, label=subfolder.value))
+            subfolder_ctrl.SetValue(self.get_subfolder_setting(subfolder))
+            self.subfolder_controls[subfolder] = subfolder_ctrl
+
     def get_key(self, data: dict, select_value: str):
         for key, value in data.items():
             if value == select_value:
@@ -75,6 +89,13 @@ class UCCSettings(SettingsPanel):
             self.localisation_cleaning_period, self.cleaning_period.GetStringSelection()
         )
 
+        for subfolder in Subfolders:
+            subfolder_ctrl = self.subfolder_controls.get(subfolder)
+            if not subfolder_ctrl:
+                continue
+
+            config.conf["UnigramCacheCleaner"][f"subfolder_{subfolder.value}"] = subfolder_ctrl.IsChecked()
+
 
 confspec = {
     "unigram_cache_path1": f"string(default='{UCCSettings.default_cache_path_store}')",
@@ -82,4 +103,8 @@ confspec = {
     "cleaning_period": "string(default='day')",
     "date_last_clean": "string(default='')",
 }
+
+for subfolder in Subfolders:
+    confspec[f"subfolder_{subfolder.value}"] = "boolean(default=True)"
+
 config.conf.spec["UnigramCacheCleaner"] = confspec

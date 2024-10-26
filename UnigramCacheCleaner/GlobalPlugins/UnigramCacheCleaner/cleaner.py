@@ -5,19 +5,10 @@ from logHandler import log
 
 from .settings import UCCSettings
 
+from .types import Subfolders
+
 
 class Cleaner:
-
-    _subfolders = [
-        "animations", "documents",
-        "music", "passport",
-        "photos", "profile_photos",
-        "secret", "secret_thumbnails",
-        "stickers", "stories",
-        "temp", "thumbnails",
-        "video_notes", "videos",
-        "voice", "wallpapers",
-    ]
 
     def __init__(self, base_path1: str, base_path2: str):
         self.base_paths = [base_path1]
@@ -27,6 +18,10 @@ class Cleaner:
     def run(self) -> str:
         total_size = 0
         for folder in self.base_paths:
+            if not os.path.exists(folder):
+                log.error(f"Error not exists base folder: {folder}")
+                continue
+
             try:
                 if self.need_clear_base_path(folder):
                     total_size += self.clear_folder(folder)
@@ -34,11 +29,14 @@ class Cleaner:
                 log.error(f"Error process base folder: {folder}")
                 log.error(err, exc_info=True)
 
-        for subfolder in self._subfolders:
+        for subfolder in Subfolders:
+            if not UCCSettings.get_subfolder_setting(subfolder):
+                continue
+
             try:
                 total_size += self._process_subfolder(subfolder)
             except Exception as err:
-                log.error(f"Error process subfolder: {subfolder}")
+                log.error(f"Error process subfolder: {subfolder.value}")
                 log.error(err, exc_info=True)
 
         return self._process_size(total_size)
@@ -49,7 +47,7 @@ class Cleaner:
             return False
 
         subfolders = [subfolder for subfolder in os.listdir(folder) if os.path.isdir(os.path.join(folder, subfolder))]
-        if list(set(subfolders) & set(self._subfolders)):
+        if list(set(subfolders) & set([subfolder.value for subfolder in Subfolders])):
             return False
 
         files = [file for file in os.listdir(folder) if os.path.isfile(os.path.join(folder, file))]
@@ -75,10 +73,10 @@ class Cleaner:
 
         return total_size
 
-    def _process_subfolder(self, subfolder: str) -> int:
+    def _process_subfolder(self, subfolder: Subfolders) -> int:
         total_size = 0
         for base_path in self.base_paths:
-            folder = os.path.join(base_path, subfolder)
+            folder = os.path.join(base_path, subfolder.value)
             if not os.path.exists(folder):
                 continue
 

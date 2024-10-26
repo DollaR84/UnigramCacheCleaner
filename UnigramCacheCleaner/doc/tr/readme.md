@@ -16,6 +16,10 @@ Klasör Yolunu ayarlarken dikkatli olun, çünkü eklenti yoldaki tüm dosyalar�
 * NVDA+SHIFT+C: önbelleği temizlemeyi elle başlatır;
 
 ## Değişikliklerin listesi:
+### Sürüm 1.4.1
+* hangi önbellek alt dizininin temizleneceği ayarı eklendi;
+* günlüklere belirtilen kök klasörün yokluğuna ilişkin bir mesaj eklendi;
+
 ### Sürüm 1.3.1
 * Türkçe yerelleştirme eklendi (Umut Korkmaz);
 
