@@ -1,7 +1,7 @@
 # UnigramCacheCleaner
 
 * Автор: Руслан Долованюк (Україна)
-* PayPal: ruslan.dolovaniuk84@gmail.com
+* PayPal: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B3VG4L8B7CV3Y&source=url
 
 цей аддон очищає кеш unigram.
 У налаштуваннях можна вказати два шляхи очищення.
