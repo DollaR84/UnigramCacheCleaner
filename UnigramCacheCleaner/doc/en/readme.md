@@ -2,6 +2,8 @@
 
 * Author: Ruslan Dolovaniuk (Ukraine)
 * PayPal: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B3VG4L8B7CV3Y&source=url
+* Telegram Channel: https://t.me/elrusapps
+* Telegram Group: https://t.me/elrus_apps
 
 this addon clears unigram cache.
 In the settings you can specify two paths for cleaning.

@@ -2,6 +2,8 @@
 
 * Автор: Руслан Долованюк (Україна)
 * PayPal: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B3VG4L8B7CV3Y&source=url
+* Telegram Channel: https://t.me/elrusapps
+* Telegram Group: https://t.me/elrus_apps
 
 цей аддон очищає кеш unigram.
 У налаштуваннях можна вказати два шляхи очищення.

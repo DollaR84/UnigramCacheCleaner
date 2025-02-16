@@ -1,7 +1,9 @@
 # Unigram Önbellek Temizleyici
 
 * Yazar: Ruslan Dolovaniuk (Ukrayna)
-* PayPal: ruslan.dolovaniuk84@gmail.com
+* PayPal: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B3VG4L8B7CV3Y&source=url
+* Telegram Channel: https://t.me/elrusapps
+* Telegram Group: https://t.me/elrus_apps
 
 bu eklenti unigram önbelleğini temizler.  
 Ayarlarda temizlik için iki klasör yolu belirleyebilirsiniz.  
