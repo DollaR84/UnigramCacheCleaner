@@ -48,6 +48,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
         self.process = wx.CallLater(60 * 1000, self.start_checker)
 
+    def terminate(self):
+        gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(UCCSettings)
+        super().terminate()
+
     def start_checker(self):
         if self.check_need_clear():
             self.run()

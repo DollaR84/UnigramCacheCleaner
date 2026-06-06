@@ -38,6 +38,10 @@ class UCCSettings(SettingsPanel):
     def get_subfolder_setting(cls, subfolder: Subfolders) -> bool:
         return config.conf["UnigramCacheCleaner"].get(f"subfolder_{subfolder.value}", True)
 
+    @classmethod
+    def get_file_db_setting(cls) -> bool:
+        return config.conf["UnigramCacheCleaner"].get("file_db_sqlite", True)
+
     def makeSettings(self, settingsSizer):
         settings_sizer_helper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
         self.cleaning_period = settings_sizer_helper.addLabeledControl(
@@ -67,6 +71,9 @@ class UCCSettings(SettingsPanel):
                 f"unigram_cache_path{index}", default_path
             )
 
+        self.file_db_sqlite_ctrl = settings_sizer_helper.addItem(wx.CheckBox(self, label="db.sqlite"))
+        self.file_db_sqlite_ctrl.SetValue(self.get_file_db_setting())
+
         group_sizer = wx.StaticBoxSizer(wx.VERTICAL, self, label=_("Subdirectories to clean up:"))
         group_box = group_sizer.GetStaticBox()
         group_helper = settings_sizer_helper.addItem(gui.guiHelper.BoxSizerHelper(self, sizer=group_sizer))
@@ -89,6 +96,8 @@ class UCCSettings(SettingsPanel):
             self.localisation_cleaning_period, self.cleaning_period.GetStringSelection()
         )
 
+        config.conf["UnigramCacheCleaner"]["file_db_sqlite"] = self.file_db_sqlite_ctrl.IsChecked()
+
         for subfolder in Subfolders:
             subfolder_ctrl = self.subfolder_controls.get(subfolder)
             if not subfolder_ctrl:
@@ -102,6 +111,7 @@ confspec = {
     "unigram_cache_path2": f"string(default='{UCCSettings.default_cache_path_beta}')",
     "cleaning_period": "string(default='day')",
     "date_last_clean": "string(default='')",
+    "file_db_sqlite": "boolean(default=True)",
 }
 
 for subfolder in Subfolders:

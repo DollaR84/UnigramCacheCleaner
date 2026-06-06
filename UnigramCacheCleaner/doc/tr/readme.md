@@ -18,6 +18,10 @@ Klasör Yolunu ayarlarken dikkatli olun, çünkü eklenti yoldaki tüm dosyalar�
 * NVDA+SHIFT+C: önbelleği temizlemeyi elle başlatır;
 
 ## Değişikliklerin listesi:
+### Sürüm 1.5.0
+* db.sqlite dosyasını silme ayarı eklendi;
+* NVDA 2026 ile uyumluluk için sürüm güncellendi;
+
 ### Sürüm 1.4.1
 * hangi önbellek alt dizininin temizleneceği ayarı eklendi;
 * günlüklere belirtilen kök klasörün yokluğuna ilişkin bir mesaj eklendi;

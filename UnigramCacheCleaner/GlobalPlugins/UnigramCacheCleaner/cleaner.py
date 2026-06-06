@@ -29,6 +29,15 @@ class Cleaner:
                 log.error(f"Error process base folder: {folder}")
                 log.error(err, exc_info=True)
 
+            try:
+                file_path = os.path.join(folder, "db.sqlite")
+                if UCCSettings.get_file_db_setting() and os.path.exists(file_path):
+                    size = os.stat(file_path).st_size
+                    os.remove(file_path)
+                    total_size += size
+            except Exception as err:
+                log.error(err, exc_info=True)
+
         for subfolder in Subfolders:
             if not UCCSettings.get_subfolder_setting(subfolder):
                 continue
