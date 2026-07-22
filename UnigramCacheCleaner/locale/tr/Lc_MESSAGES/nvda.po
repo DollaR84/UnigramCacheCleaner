@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Unigram Önbellek Temizleyici\n"
+"POT-Creation-Date: 2024-09-17 00:26+0300\n"
+"PO-Revision-Date: 2024-09-17 00:26+0300\n"
+"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ../../UnigramCacheCleaner/UnigramCacheCleaner/"
+"GlobalPlugins/UnigramCacheCleaner\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: main.py:29
+msgid "bytes"
+msgstr "bayt"
+
+#: main.py:30
+msgid "kilobytes"
+msgstr "kilobayt"
+
+#: main.py:31
+msgid "megabytes"
+msgstr "megabayt"
+
+#: main.py:32
+msgid "gigabytes"
+msgstr "gigabayt"
+
+#: main.py:33
+msgid "terabytes"
+msgstr "terabayt"
+
+#: main.py:60
+msgid "cleared from unigram cache"
+msgstr "unigram önbelleğinden temizlendi"
+
+#: main.py:93
+msgid "Manual clean cache"
+msgstr "Önbelleği elle temizle"
+
+#: settings.py:20
+msgid "cleaning once a day"
+msgstr "günde bir kez temizle"
+
+#: settings.py:21
+msgid "cleaning once a week"
+msgstr "haftada bir temizle"
+
+#: settings.py:22
+msgid "cleaning once a month"
+msgstr "ayda bir temizle"
+
+#: settings.py:44
+msgid "cleaning period:"
+msgstr "temizleme Periyodunu Seçin:"
+
+#: settings.py:51
+msgid "Browse..."
+msgstr "Gözat..."
+
+#: settings.py:52
+msgid "Select a directory"
+msgstr "Bir dizin seçin"
+
+#: settings.py:57
+msgid "Path to cache unigram folder"
+msgstr "Unigram önbellek klasörünün yolu"
+
+#: settings.py:70
+msgid "Subdirectories to clean up:"
+msgstr "Temizlenecek alt dizinler:"

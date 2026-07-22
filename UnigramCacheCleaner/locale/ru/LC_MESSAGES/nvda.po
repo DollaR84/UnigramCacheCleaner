@@ -1,0 +1,235 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UnigramCacheCleaner\n"
+"POT-Creation-Date: 2024-09-17 00:24+0300\n"
+"PO-Revision-Date: 2024-09-17 00:25+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ../../UnigramCacheCleaner/UnigramCacheCleaner/"
+"GlobalPlugins/UnigramCacheCleaner\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: main.py:29
+msgid "bytes"
+msgstr "байт"
+
+#: main.py:30
+msgid "kilobytes"
+msgstr "килобайт"
+
+#: main.py:31
+msgid "megabytes"
+msgstr "мегабайт"
+
+#: main.py:32
+msgid "gigabytes"
+msgstr "гигабайт"
+
+#: main.py:33
+msgid "terabytes"
+msgstr "терабайт"
+
+#: main.py:60
+msgid "cleared from unigram cache"
+msgstr "очищено из кеша Unigram"
+
+#: main.py:93
+msgid "Manual clean cache"
+msgstr "Ручная очистка кэша"
+
+#: settings.py:20
+msgid "cleaning once a day"
+msgstr "очистка раз в день"
+
+#: settings.py:21
+msgid "cleaning once a week"
+msgstr "очистка раз в неделю"
+
+#: settings.py:22
+msgid "cleaning once a month"
+msgstr "очистка раз в месяц"
+
+#: settings.py:44
+msgid "cleaning period:"
+msgstr "период очистки:"
+
+#: settings.py:51
+msgid "Browse..."
+msgstr "Обзор..."
+
+#: settings.py:52
+msgid "Select a directory"
+msgstr "Выберите каталог"
+
+#: settings.py:57
+msgid "Path to cache unigram folder"
+msgstr "Путь к папке кэша Unigram"
+
+#: settings.py:70
+msgid "Subdirectories to clean up:"
+msgstr "Подкаталоги для очистки:"
+
+#~ msgid "Alarm"
+#~ msgstr "Будильник"
+
+#~ msgid "Alarm time period set"
+#~ msgstr "Установленное время:"
+
+#~ msgid "Countdown timer"
+#~ msgstr "Обратный отсчет"
+
+#~ msgid "Countdown timer time period set"
+#~ msgstr "Установленный период:"
+
+#~ msgid "data saved"
+#~ msgstr "данные сохранены"
+
+#~ msgid "Signal"
+#~ msgstr "Временой сигнал"
+
+#~ msgid "Timer"
+#~ msgstr "Секундомер"
+
+#~ msgid "Weekday"
+#~ msgstr "День недели"
+
+#~ msgid "Alarm started"
+#~ msgstr "Будильник запущен"
+
+#~ msgid "The alarm is disabled"
+#~ msgstr "Будильник отключен"
+
+#~ msgid "countdown timer pause"
+#~ msgstr "Обратный отсчет приостановлен"
+
+#~ msgid "Countdown timer started"
+#~ msgstr "Обратный отсчет запущен"
+
+#~ msgid "The countdown timer is disabled"
+#~ msgstr "Обратный отсчет отключен"
+
+#~ msgid "countdown timer resume"
+#~ msgstr "Обратный отсчет восстановлен"
+
+#~ msgid "signal type sound"
+#~ msgstr "Звук"
+
+#~ msgid "signal type speech"
+#~ msgstr "Речь"
+
+#~ msgid "signal type sound and speech"
+#~ msgstr "Звук и речь"
+
+#~ msgid "signal type off"
+#~ msgstr "Отключено"
+
+#~ msgid "timer pause"
+#~ msgstr "секундомер приостановлен"
+
+#~ msgid "Timer started"
+#~ msgstr "секундомер запущен"
+
+#~ msgid "timer resume"
+#~ msgstr "секундомер восстановлен"
+
+#~ msgid "The timer is disabled. Working hours:"
+#~ msgstr "секундомер отключен. Рабочее время:"
+
+#~ msgid "Monday"
+#~ msgstr "Понедельник"
+
+#~ msgid "Tuesday"
+#~ msgstr "Вторник"
+
+#~ msgid "Wednesday"
+#~ msgstr "Среда"
+
+#~ msgid "Thursday"
+#~ msgstr "Четверг"
+
+#~ msgid "Friday"
+#~ msgstr "Пятница"
+
+#~ msgid "Saturday"
+#~ msgstr "Суббота"
+
+#~ msgid "Sunday"
+#~ msgstr "Воскресенье"
+
+#~ msgid "Error"
+#~ msgstr "Ошибка"
+
+#~ msgid "date event source type 1"
+#~ msgstr "исторические факты"
+
+#~ msgid "date event source type 2"
+#~ msgstr "события из wikipedia"
+
+#~ msgid "date event source type 1 and 2"
+#~ msgstr "события из Wikipedia и исторические факты"
+
+#~ msgid "date event source type off"
+#~ msgstr "отключено"
+
+#~ msgid "Select a program to fast launch"
+#~ msgstr "Выберите программу для быстрого запуска"
+
+#~ msgid "main action"
+#~ msgstr "основная функция"
+
+#~ msgid "change mode"
+#~ msgstr "изменить режим"
+
+#~ msgid "additional function"
+#~ msgstr "дополнительная функция"
+
+#~ msgid "additional 2 action"
+#~ msgstr "дополнительная функция для запуска"
+
+#~ msgid "one_day"
+#~ msgstr "день"
+
+#~ msgid "one_hour"
+#~ msgstr "час"
+
+#~ msgid "one_minute"
+#~ msgstr "минуту"
+
+#~ msgid "one_second"
+#~ msgstr "секунду"
+
+#~ msgid "2_to_4_days"
+#~ msgstr "дня"
+
+#~ msgid "5_more_days"
+#~ msgstr "дней"
+
+#~ msgid "2_to_4_hours"
+#~ msgstr "часа"
+
+#~ msgid "5_more_hours"
+#~ msgstr "часов"
+
+#~ msgid "2_to_4_minutes"
+#~ msgstr "минуты"
+
+#~ msgid "5_more_minutes"
+#~ msgstr "минут"
+
+#~ msgid "2_to_4_seconds"
+#~ msgstr "секунды"
+
+#~ msgid "5_more_seconds"
+#~ msgstr "секунд"
+
+#~ msgid "Says the day of the week"
+#~ msgstr "Говорит день недели"
+
+#~ msgid "action selected"
+#~ msgstr "выбран"
