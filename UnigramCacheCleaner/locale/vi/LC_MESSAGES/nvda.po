@@ -1,0 +1,247 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UnigramCacheCleaner\n"
+"POT-Creation-Date: 2024-09-17 00:24+0300\n"
+"PO-Revision-Date: 2026-07-23 06:42+0700\n"
+"Last-Translator: nguyenninhhoang "
+"<nguyenninhhoang2005@gmail.com>\n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+"X-Poedit-Basepath: ../../UnigramCacheCleaner/UnigramCacheCleaner/"
+"GlobalPlugins/UnigramCacheCleaner\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: main.py:29
+msgid "bytes"
+msgstr "bytes"
+
+#: main.py:30
+msgid "kilobytes"
+msgstr "kilobytes"
+
+#: main.py:31
+msgid "megabytes"
+msgstr "megabytes"
+
+#: main.py:32
+msgid "gigabytes"
+msgstr "gigabytes"
+
+#: main.py:33
+msgid "terabytes"
+msgstr "terabytes"
+
+#: main.py:60
+msgid "cleared from unigram cache"
+msgstr "đã xóa từ bộ nhớ đệm unigram"
+
+#: main.py:93
+msgid "Manual clean cache"
+msgstr "Làm sạch bộ nhớ đệm thủ công"
+
+#: settings.py:20
+msgid "cleaning once a day"
+msgstr "dọn dẹp mỗi ngày một lần"
+
+#: settings.py:21
+msgid "cleaning once a week"
+msgstr "dọn dẹp mỗi tuần một lần"
+
+#: settings.py:22
+msgid "cleaning once a month"
+msgstr "dọn dẹp mỗi tháng một lần"
+
+#: settings.py:44
+msgid "cleaning period:"
+msgstr "thời gian làm sạch:"
+
+#: settings.py:51
+msgid "Browse..."
+msgstr "thay đổi..."
+
+#: settings.py:52
+msgid "Select a directory"
+msgstr "chọn đường dẫn"
+
+#: settings.py:57
+msgid "Path to cache unigram folder"
+msgstr "Đường dẫn tới thư mục bộ nhớ đệm unigram"
+
+#: settings.py:70
+msgid "Subdirectories to clean up:"
+msgstr "Thư mục con cần dọn dẹp:"
+
+#~ msgid "Alarm"
+#~ msgstr "Alarm"
+
+#~ msgid "Alarm time period set"
+#~ msgstr "Alarm time period set"
+
+#~ msgid "Countdown timer"
+#~ msgstr "Countdown timer"
+
+#~ msgid "Countdown timer time period set"
+#~ msgstr "Set time:"
+
+#~ msgid "data saved"
+#~ msgstr "data saved"
+
+#~ msgid "Signal"
+#~ msgstr "Signal"
+
+#~ msgid "Timer"
+#~ msgstr "Stopwatch"
+
+#~ msgid "Weekday"
+#~ msgstr "Weekday"
+
+#~ msgid "Alarm started"
+#~ msgstr "Alarm started"
+
+#~ msgid "The alarm is disabled"
+#~ msgstr "The alarm is disabled"
+
+#~ msgid "countdown timer pause"
+#~ msgstr "countdown timer pause"
+
+#~ msgid "Countdown timer started"
+#~ msgstr "Countdown timer started"
+
+#~ msgid "The countdown timer is disabled"
+#~ msgstr "The countdown timer is disabled. Working hours:"
+
+#~ msgid "countdown timer resume"
+#~ msgstr "countdown timer resume"
+
+#~ msgid "signal type sound"
+#~ msgstr "Sound"
+
+#~ msgid "signal type speech"
+#~ msgstr "Speech"
+
+#~ msgid "signal type sound and speech"
+#~ msgstr "Sound and speech"
+
+#~ msgid "signal type off"
+#~ msgstr "Disabled"
+
+#~ msgid "timer pause"
+#~ msgstr "Stopwatch pause"
+
+#~ msgid "Timer started"
+#~ msgstr "Stopwatch started"
+
+#~ msgid "timer resume"
+#~ msgstr "Stopwatch resume"
+
+#~ msgid "The timer is disabled. Working hours:"
+#~ msgstr "TheStopwatch is disabled. Working hours:"
+
+#~ msgid "Monday"
+#~ msgstr "Monday"
+
+#~ msgid "Tuesday"
+#~ msgstr "Tuesday"
+
+#~ msgid "Wednesday"
+#~ msgstr "Wednesday"
+
+#~ msgid "Thursday"
+#~ msgstr "Thursday"
+
+#~ msgid "Friday"
+#~ msgstr "Friday"
+
+#~ msgid "Saturday"
+#~ msgstr "Saturday"
+
+#~ msgid "Sunday"
+#~ msgstr "Sunday"
+
+#~ msgid "Error"
+#~ msgstr "Error"
+
+#~ msgid "date event source type 1"
+#~ msgstr "historical facts"
+
+#~ msgid "date event source type 2"
+#~ msgstr "events from Wikipedia"
+
+#~ msgid "date event source type 1 and 2"
+#~ msgstr "events from Wikipedia and historical facts"
+
+#~ msgid "date event source type off"
+#~ msgstr "disabled"
+
+#~ msgid "Select a program to fast launch"
+#~ msgstr "Select a program to fast launch"
+
+#~ msgid "main action"
+#~ msgstr "main action"
+
+#~ msgid "change mode"
+#~ msgstr "change mode"
+
+#~ msgid "additional function"
+#~ msgstr "additional function"
+
+#~ msgid "additional 2 action"
+#~ msgstr "additional launch function"
+
+#~ msgid "one_day"
+#~ msgstr "day"
+
+#~ msgid "one_hour"
+#~ msgstr "hour"
+
+#~ msgid "one_minute"
+#~ msgstr "minute"
+
+#, fuzzy
+#~| msgid "second"
+#~ msgid "one_second"
+#~ msgstr "second"
+
+#~ msgid "2_to_4_days"
+#~ msgstr "days"
+
+#~ msgid "5_more_days"
+#~ msgstr "days"
+
+#~ msgid "2_to_4_hours"
+#~ msgstr "hours"
+
+#~ msgid "5_more_hours"
+#~ msgstr "hours"
+
+#~ msgid "2_to_4_minutes"
+#~ msgstr "minutes"
+
+#~ msgid "5_more_minutes"
+#~ msgstr "minutes"
+
+#~ msgid "2_to_4_seconds"
+#~ msgstr "seconds"
+
+#~ msgid "5_more_seconds"
+#~ msgstr "seconds"
+
+#~ msgid "Says the day of the week"
+#~ msgstr "Says the day of the week"
+
+#~ msgid "action selected"
+#~ msgstr "selected"
+
+#~ msgid "day"
+#~ msgstr "day"
+
+#~ msgid "days"
+#~ msgstr "days"
+
+#~ msgid "hours"
+#~ msgstr "hours"
