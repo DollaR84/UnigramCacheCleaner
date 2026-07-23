@@ -1,0 +1,11 @@
+.env/
+__pycache__/
+.ruff_cache/
+wsl2win/
+.flake8
+.pylintrc
+*.log
+*.dat
+*.service
+*.sql
+*.sqlite
