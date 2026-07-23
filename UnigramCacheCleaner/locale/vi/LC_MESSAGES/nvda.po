@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UnigramCacheCleaner\n"
 "POT-Creation-Date: 2024-09-17 00:24+0300\n"
-"PO-Revision-Date: 2026-07-23 06:42+0700\n"
+"PO-Revision-Date: 2026-07-23 17:30+0700\n"
 "Last-Translator: nguyenninhhoang "
 "<nguyenninhhoang2005@gmail.com>\n"
 "Language-Team: \n"
@@ -62,11 +62,11 @@ msgstr "thời gian làm sạch:"
 
 #: settings.py:51
 msgid "Browse..."
-msgstr "thay đổi..."
+msgstr "Thay đổi..."
 
 #: settings.py:52
 msgid "Select a directory"
-msgstr "chọn đường dẫn"
+msgstr "Chọn đường dẫn"
 
 #: settings.py:57
 msgid "Path to cache unigram folder"
