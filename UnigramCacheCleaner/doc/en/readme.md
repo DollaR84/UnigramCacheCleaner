@@ -17,6 +17,9 @@ When setting your path, be careful, as the addon will delete all files from it!
 * NVDA+SHIFT+C: manually start clearing cache;
 
 ## List of changes:
+### Version 1.5.1
+* added vietnamese translation (Nguyễn Ninh Hoàng);
+
 ### Version 1.5.0
 * Added a setting to delete the db.sqlite file;
 * Updated version for compatibility with NVDA 2026;

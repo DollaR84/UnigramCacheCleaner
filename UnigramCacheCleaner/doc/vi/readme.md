@@ -16,6 +16,9 @@ Khi thiết lập đường dẫn của bạn, hãy cẩn thận, vì addon sẽ
 * NVDA+SHIFT+C: bắt đầu xóa bộ nhớ đệm thủ công;
 
 ## danh sách nhật kí thay đổi
+### phiên bản 1.5.1
+* added vietnamese translation (Nguyễn Ninh Hoàng);
+
 ### phiên bản 1.5.0
 * Đã thêm cài đặt để xóa tệp db.sqlite;
 * cập nhật phiên bản đề tương thích với NVDA 2026.1;
