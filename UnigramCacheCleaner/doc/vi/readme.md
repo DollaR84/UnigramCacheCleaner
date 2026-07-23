@@ -17,7 +17,7 @@ Khi thiết lập đường dẫn của bạn, hãy cẩn thận, vì addon sẽ
 
 ## danh sách nhật kí thay đổi
 ### phiên bản 1.5.1
-* added vietnamese translation (Nguyễn Ninh Hoàng);
+* đã thêm bản dịch tiếng việt (Nguyễn Ninh Hoàng);
 
 ### phiên bản 1.5.0
 * Đã thêm cài đặt để xóa tệp db.sqlite;
