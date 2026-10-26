@@ -17,6 +17,10 @@ When setting your path, be careful, as the addon will delete all files from it!
 * NVDA+SHIFT+C: manually start clearing cache;
 
 ## List of changes:
+### Version 1.5.5
+* Fixed a bug with deleting subdirectories in user directories (bug found Nguyễn Ninh Hoàng);
+* The operation of the cleaning module has been improved;
+* Also fixed a few more found bugs;
 ### Version 1.5.1
 * added vietnamese translation (Nguyễn Ninh Hoàng);
 
