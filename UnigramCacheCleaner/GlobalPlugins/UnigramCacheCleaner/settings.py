@@ -24,15 +24,13 @@ class UCCSettings(SettingsPanel):
 
     local_appdata = os.environ.get("LOCALAPPDATA")
 
-    @classmethod
-    @property
-    def default_cache_path_store(cls) -> str:
-        return os.path.join(cls.local_appdata, r"Packages\38833FF26BA1D.UnigramPreview_g9c9v27vpyspw\LocalState\0")
+    default_cache_path_store = os.path.join(
+        local_appdata, r"Packages\38833FF26BA1D.UnigramPreview_g9c9v27vpyspw\LocalState\0"
+    )
 
-    @classmethod
-    @property
-    def default_cache_path_beta(cls) -> str:
-        return os.path.join(cls.local_appdata, r"Packages\TelegramFZ-LLC.Unigram_1vfw5zm9jmzqy\LocalState\0")
+    default_cache_path_beta = os.path.join(
+        local_appdata, r"Packages\TelegramFZ-LLC.Unigram_1vfw5zm9jmzqy\LocalState\0"
+    )
 
     @classmethod
     def get_subfolder_setting(cls, subfolder: Subfolders) -> bool:

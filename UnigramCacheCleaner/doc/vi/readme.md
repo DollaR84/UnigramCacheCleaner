@@ -16,6 +16,11 @@ Khi thiết lập đường dẫn của bạn, hãy cẩn thận, vì addon sẽ
 * NVDA+SHIFT+C: bắt đầu xóa bộ nhớ đệm thủ công;
 
 ## danh sách nhật kí thay đổi
+### phiên bản 1.5.5
+* Đã sửa lỗi khi xóa thư mục con trong thư mục người dùng (lỗi được báo cáo bởi Nguyễn Ninh Hoàng);
+* Hoạt động của mô-đun dọn dẹp đã được cải thiện;
+* Ngoài ra, đã sửa một vài lỗi khác;
+
 ### phiên bản 1.5.1
 * đã thêm bản dịch tiếng việt (Nguyễn Ninh Hoàng);
 

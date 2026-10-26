@@ -18,6 +18,10 @@ Klasör Yolunu ayarlarken dikkatli olun, çünkü eklenti yoldaki tüm dosyalar�
 * NVDA+SHIFT+C: önbelleği temizlemeyi elle başlatır;
 
 ## Değişikliklerin listesi:
+### Sürüm 1.5.5
+* Kullanıcı dizinlerindeki alt dizinlerin silinmesiyle ilgili bir hata düzeltildi (Nguyễn Ninh Hoàng tarafından bildirilen hata);
+* Temizleme modülünün performansı iyileştirildi;
+* Ayrıca bulunan diğer birkaç hata da düzeltildi;
 ### Sürüm 1.5.1
 * added vietnamese translation (Nguyễn Ninh Hoàng);
 

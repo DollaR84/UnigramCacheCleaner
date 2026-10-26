@@ -38,14 +38,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
         gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(UCCSettings)
 
-        unigram_cache_path1 = config.conf["UnigramCacheCleaner"].get(
-            "unigram_cache_path1", UCCSettings.default_cache_path_store
-        )
-        unigram_cache_path2 = config.conf["UnigramCacheCleaner"].get(
-            "unigram_cache_path2", UCCSettings.default_cache_path_beta
-        )
-        self.cleaner = Cleaner(unigram_cache_path1, unigram_cache_path2)
-
         self.process = wx.CallLater(60 * 1000, self.start_checker)
 
     def terminate(self):
@@ -59,7 +51,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         self.process = None
 
     def run(self):
-        size_suff = self.cleaner.run()
+        conf = config.conf["UnigramCacheCleaner"]
+        cleaner = Cleaner(
+        conf.get("unigram_cache_path1", UCCSettings.default_cache_path_store),
+        conf.get("unigram_cache_path2", UCCSettings.default_cache_path_beta),
+    )
+
+        size_suff = cleaner.run()
         size, suff = size_suff[:-3], self.size_suff.get(size_suff[-2:], "")
         message = " ".join([_("cleared from unigram cache"), size, suff])
         ui.message(message)
